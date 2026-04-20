@@ -17,11 +17,8 @@ venv/
 env/
 .venv/
 
-# Model weights (large binary files)
-model/best_crack_model.pt
-model/best_trained_model_pth.zip
-model/extracted/
-model/best_crack_model_colab/
+# Model weights — tracked in repo (files are under 100MB)
+# model/
 
 # OS
 .DS_Store

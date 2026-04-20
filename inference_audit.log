@@ -1,0 +1,30 @@
+2026-04-21 01:05:58 | INFO    | ============================================================
+2026-04-21 01:05:58 | INFO    | SYSTEM BOOT: Initializing Dual-Engine Crack Detection System
+2026-04-21 01:05:58 | INFO    | CNN Model loaded successfully from model\best_crack_model.pt
+2026-04-21 01:05:58 | INFO    | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.42.147:5000
+2026-04-21 01:05:58 | INFO    | [33mPress CTRL+C to quit[0m
+2026-04-21 01:06:19 | INFO    | 127.0.0.1 - - [21/Apr/2026 01:06:19] "POST /predict HTTP/1.1" 200 -
+2026-04-21 01:11:16 | INFO    | ============================================================
+2026-04-21 01:11:16 | INFO    | SYSTEM BOOT: Initializing Dual-Engine Crack Detection System
+2026-04-21 01:11:16 | INFO    | CNN Model loaded successfully from model\best_crack_model.pt
+2026-04-21 01:11:16 | INFO    | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.42.147:5000
+2026-04-21 01:11:16 | INFO    | [33mPress CTRL+C to quit[0m
+2026-04-21 01:12:47 | INFO    | TX-4AC827 | Request accepted: crack_test.jpg (15.5 KB)
+2026-04-21 01:12:47 | INFO    | TX-4AC827 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 01:12:49 | INFO    | TX-4AC827 | Groq Verdict: CRACK DETECTED (Conf: 95.0%, Sev: Moderate)
+2026-04-21 01:12:49 | INFO    | TX-4AC827 | Final Verdict: CRACK DETECTED (Conf: 96.5%) | Latency: 2310 ms
+2026-04-21 01:12:49 | INFO    | ------------------------------------------------------------
+2026-04-21 01:12:49 | INFO    | 127.0.0.1 - - [21/Apr/2026 01:12:49] "POST /predict HTTP/1.1" 200 -
+2026-04-21 01:15:49 | INFO    | 127.0.0.1 - - [21/Apr/2026 01:15:49] "GET / HTTP/1.1" 200 -
+2026-04-21 01:15:55 | INFO    | TX-379B76 | Request accepted: 7001-114.jpg (8.6 KB)
+2026-04-21 01:15:55 | INFO    | TX-379B76 | CNN Verdict: CRACK DETECTED (Conf: 87.5%)
+2026-04-21 01:15:57 | INFO    | TX-379B76 | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 01:15:57 | INFO    | TX-379B76 | Final Verdict: NO CRACK (Conf: 70.2%) | Latency: 2107 ms
+2026-04-21 01:15:57 | INFO    | ------------------------------------------------------------
+2026-04-21 01:15:57 | INFO    | 127.0.0.1 - - [21/Apr/2026 01:15:57] "POST /predict HTTP/1.1" 200 -

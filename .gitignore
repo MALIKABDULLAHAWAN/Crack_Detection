@@ -1,0 +1,36 @@
+# Environment variables — never commit real keys
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Model weights (large binary files)
+model/best_crack_model.pt
+model/best_trained_model_pth.zip
+model/extracted/
+model/best_crack_model_colab/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Uploads / temp
+uploads/
+*.tmp

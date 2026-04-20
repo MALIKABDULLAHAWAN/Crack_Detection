@@ -7,7 +7,6 @@
   <meta name="description" content="AI-powered structural crack detection using CNN + Groq Llama 4 vision AI for accurate structural health monitoring." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
   <style>
@@ -45,7 +44,6 @@
       overflow-x: hidden;
     }
 
-    /* Ambient animated background grid */
     body::before {
       content: '';
       position: fixed; inset: 0;
@@ -58,7 +56,6 @@
       pointer-events: none; z-index: 0;
     }
 
-    /* ── Header ── */
     header {
       position: relative; z-index: 1;
       text-align: center;
@@ -76,14 +73,10 @@
       box-shadow: 0 0 20px rgba(59,130,246,0.2);
     }
 
-    .badge-dot {
-      width: 6px; height: 6px; background: var(--accent);
-      border-radius: 50%; animation: pulse 2s infinite;
-    }
-
+    .badge-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse {
       0%,100% { opacity:1; transform:scale(1); box-shadow: 0 0 0 0 rgba(59,130,246,0.7); }
-      50%      { opacity:0.4; transform:scale(1.5); box-shadow: 0 0 10px 4px rgba(59,130,246,0); }
+      50%     { opacity:0.4; transform:scale(1.5); box-shadow: 0 0 10px 4px rgba(59,130,246,0); }
     }
 
     h1 {
@@ -93,26 +86,18 @@
       background-clip: text; margin-bottom: 16px; letter-spacing: -0.02em;
     }
 
-    .subtitle {
-      color: var(--muted); font-size: 15px; line-height: 1.6;
-      max-width: 600px; margin: 0 auto;
-    }
+    .subtitle { color: var(--muted); font-size: 15px; line-height: 1.6; max-width: 600px; margin: 0 auto; }
 
-    /* ── Dashboard Layout ── */
     .dashboard {
       position: relative; z-index: 1;
       width: 100%; max-width: 1280px;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      align-items: start;
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: start;
     }
 
     .panel {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 28px;
-      box-shadow: 0 32px 100px rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 32px 100px rgba(0,0,0,0.6); backdrop-filter: blur(10px);
     }
     
     .panel-header {
@@ -129,30 +114,25 @@
     }
     .status-dot { width: 6px; height: 6px; background: var(--success); border-radius: 50%; box-shadow: 0 0 8px var(--success); }
 
-    /* ── Upload zone ── */
+    /* Upload zone */
     .upload-zone {
       border: 2px dashed var(--border); border-radius: 12px;
       padding: 40px 20px; text-align: center; cursor: pointer;
       transition: all .25s ease; background: var(--surface2); position: relative;
     }
-
     .upload-zone:hover, .upload-zone.drag-over {
       border-color: var(--accent); background: rgba(59,130,246,0.08);
       box-shadow: inset 0 0 20px rgba(59,130,246,0.05);
     }
-
     .upload-zone input[type="file"] {
-      position: absolute; inset: 0; opacity: 0; cursor: pointer;
-      width: 100%; height: 100%;
+      position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
     }
 
     .upload-icon {
       width: 54px; height: 54px; margin: 0 auto 16px;
       background: rgba(59,130,246,0.1); border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      border: 1px solid rgba(59,130,246,0.2);
+      display: flex; align-items: center; justify-content: center; border: 1px solid rgba(59,130,246,0.2);
     }
-
     .upload-icon svg { width: 28px; height: 28px; color: var(--accent); }
     .upload-title  { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
     .upload-hint   { font-size: 13px; color: var(--muted); }
@@ -169,7 +149,7 @@
       border: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* ── Analyze button ── */
+    /* Analyze button */
     #analyzeBtn {
       margin-top: 20px; width: 100%; padding: 16px; border: none;
       border-radius: 12px; font-size: 16px; font-weight: 700; cursor: pointer;
@@ -187,22 +167,14 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* ── Results grid ── */
+    /* SINGLE Results */
     #results-section { display: none; margin-top: 24px; }
-
     .verdict-box {
       border-radius: 16px; padding: 28px; text-align: center;
-      margin-bottom: 24px; animation: fadeUp .4s ease;
-      position: relative; overflow: hidden;
+      margin-bottom: 24px; animation: fadeUp .4s ease; position: relative; overflow: hidden;
     }
-    .verdict-box::before {
-      content: ''; position: absolute; top:0; left:0; right:0; height:4px;
-    }
-
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(16px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
+    .verdict-box::before { content: ''; position: absolute; top:0; left:0; right:0; height:4px; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
 
     .verdict-box.crack    { background:rgba(239,68,68,0.06); border:1px solid rgba(239,68,68,0.25); box-shadow: inset 0 0 30px rgba(239,68,68,0.05); }
     .verdict-box.crack::before { background: linear-gradient(90deg, #ef4444, #f97316); }
@@ -223,48 +195,30 @@
     .crack    .conf-bar { background:linear-gradient(90deg,#ef4444,#f97316); box-shadow: 0 0 10px #ef4444; }
     .no-crack .conf-bar { background:linear-gradient(90deg,#10b981,#06b6d4); box-shadow: 0 0 10px #10b981; }
     .analyzing .conf-bar { background:linear-gradient(90deg,#3b82f6,#8b5cf6); width: 100%; opacity: 0.3; animation: pulseBar 2s infinite; }
-    
     @keyframes pulseBar { 0%, 100% { opacity: 0.3; } 50% { opacity: 0.7; } }
 
-    /* Engine Cards */
     .engines-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .engine-card {
-      background: var(--surface2); border: 1px solid var(--border);
-      border-radius: 12px; padding: 20px; animation: fadeUp .5s ease;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
+    .engine-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
     .engine-card:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
-
     .engine-card.groq-card { border-color: rgba(139,92,246,0.3); background: linear-gradient(180deg, rgba(139,92,246,0.05), transparent 40%); }
     .engine-card.cnn-card  { border-color: rgba(59,130,246,0.3); background: linear-gradient(180deg, rgba(59,130,246,0.05), transparent 40%); }
 
     .engine-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-    .engine-logo {
-      width: 32px; height: 32px; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 15px; font-weight: 800; font-family: var(--font-mono);
-    }
+    .engine-logo { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; font-family: var(--font-mono); }
     .groq-card .engine-logo { background: rgba(139,92,246,0.15); color:#c4b5fd; border: 1px solid rgba(139,92,246,0.3); }
     .cnn-card  .engine-logo { background: rgba(59,130,246,0.15);  color:#93c5fd; border: 1px solid rgba(59,130,246,0.3); }
 
     .engine-name { font-size: 14px; font-weight: 700; color: #fff; }
     .engine-sub  { font-size: 11px; color: var(--muted); font-family: var(--font-mono); }
-
     .engine-result { font-size: 16px; font-weight: 800; margin-bottom: 4px; }
     .engine-result.crack    { color: #f87171; }
     .engine-result.no-crack { color: #34d399; }
     .engine-result.pending  { color: var(--muted); }
-
     .engine-conf  { font-size: 12px; color: var(--muted); margin-bottom: 12px; font-family: var(--font-mono); }
-    .engine-expl {
-      font-size: 13px; color: #cbd5e1; line-height: 1.6;
-      border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px; margin-top: 10px;
-    }
+    .engine-expl { font-size: 13px; color: #cbd5e1; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 12px; margin-top: 10px; }
 
     .severity-pill {
-      display: inline-block; font-size: 10px; font-weight: 700;
-      border-radius: 4px; padding: 3px 10px; margin-bottom: 8px;
-      text-transform: uppercase; letter-spacing: 0.1em;
+      display: inline-block; font-size: 10px; font-weight: 700; border-radius: 4px; padding: 3px 10px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.1em;
     }
     .sev-none     { background:rgba(16,185,129,0.15);  color:#34d399; border: 1px solid rgba(16,185,129,0.3); }
     .sev-hairline { background:rgba(234,179,8,0.15);  color:#fbbf24; border: 1px solid rgba(234,179,8,0.3); }
@@ -272,50 +226,84 @@
     .sev-moderate { background:rgba(239,68,68,0.15);  color:#f87171; border: 1px solid rgba(239,68,68,0.3); }
     .sev-severe   { background:rgba(185,28,28,0.25);  color:#fca5a5; border: 1px solid rgba(239,68,68,0.6); box-shadow: 0 0 10px rgba(239,68,68,0.2); }
 
-    /* Recommendation & Insight */
-    .rec-box, .insight-box {
-      margin-top: 16px; padding: 18px;
-      border-radius: 12px; font-size: 13.5px; line-height: 1.6;
-      animation: fadeUp .6s ease;
-    }
-    .rec-box {
-      background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(59,130,246,0.02)); 
-      border: 1px solid rgba(59,130,246,0.3); color: #bfdbfe;
-    }
+    .rec-box, .insight-box { margin-top: 16px; padding: 18px; border-radius: 12px; font-size: 13.5px; line-height: 1.6; animation: fadeUp .6s ease; }
+    .rec-box { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(59,130,246,0.02)); border: 1px solid rgba(59,130,246,0.3); color: #bfdbfe; }
     .rec-box strong { color: #60a5fa; display: block; margin-bottom: 4px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
-    
-    .insight-box {
-      background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(139,92,246,0.02)); 
-      border: 1px solid rgba(139,92,246,0.3); color: #ddd6fe; margin-top: 16px;
-    }
+    .insight-box { background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(139,92,246,0.02)); border: 1px solid rgba(139,92,246,0.3); color: #ddd6fe; margin-top: 16px; }
     .insight-box strong { color: #a78bfa; display: flex; align-items: center; gap: 8px; margin-bottom: 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.05em; }
 
+    /* ── BATCH Results Section ── */
+    #batch-section { display: none; margin-top: 24px; animation: fadeUp 0.5s ease; }
+    .batch-progress-container {
+      background: var(--surface2); border: 1px solid var(--border); border-radius: 12px;
+      padding: 20px; margin-bottom: 20px;
+    }
+    .batch-header {
+      display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 12px;
+    }
+    .batch-title { font-size: 18px; font-weight: 700; color: #fff; }
+    .batch-stats { font-size: 14px; color: var(--muted); font-family: var(--font-mono); }
+    .progress-bar-wrap {
+      background: rgba(255,255,255,0.06); border-radius: 100px; height: 8px; overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%; background: linear-gradient(90deg, var(--accent), var(--purple));
+      border-radius: 100px; width: 0%; transition: width 0.4s ease;
+    }
+    
+    /* Executive Summary Box */
+    #executiveSummary {
+      display: none; background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08));
+      border: 1px solid rgba(59,130,246,0.3); border-radius: 12px; padding: 20px; margin-bottom: 20px;
+      animation: fadeUp .5s ease;
+    }
+    .exec-title { font-size: 16px; font-weight: 800; color: #fff; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 8px; }
+    .exec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+    .exec-stat { background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+    .exec-val { font-size: 20px; font-weight: 800; color: #fff; }
+    .exec-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+    .exec-rec { font-size: 13px; color: #bfdbfe; line-height: 1.5; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; }
+
+    .table-container {
+      overflow-x: auto; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; text-align: left; }
+    th, td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { background: rgba(0,0,0,0.2); font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; font-size: 11px; }
+    tbody tr:hover { background: rgba(255,255,255,0.02); }
+    tbody tr:last-child td { border-bottom: none; }
+    
+    .status-badge {
+      display: inline-block; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 700;
+    }
+    .status-badge.crack { background: rgba(239,68,68,0.15); color: #f87171; border: 1px solid rgba(239,68,68,0.3); }
+    .status-badge.nocrack { background: rgba(16,185,129,0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+    .status-badge.pending { background: rgba(148,163,184,0.15); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); }
+
+    /* Insight sub-row */
+    .insight-subrow { font-size: 12px; color: var(--muted); margin-top: 8px; padding-left: 10px; border-left: 2px solid rgba(139,92,246,0.3); }
+    .insight-subrow strong { color: #c4b5fd; display: block; margin-bottom: 2px; }
+
+    #downloadBtn {
+      margin-top: 16px; display: none; width: 100%; padding: 12px; border: 1px solid var(--accent);
+      border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
+      background: rgba(59,130,246,0.1); color: var(--accent); transition: all .2s;
+    }
+    #downloadBtn:hover { background: rgba(59,130,246,0.2); color: #fff; }
+
     /* ── Analytics Right Panel ── */
-    .telemetry {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;
-    }
-    .tel-card {
-      background: var(--surface2); border: 1px solid var(--border); border-radius: 10px;
-      padding: 14px; display: flex; flex-direction: column;
-    }
+    .telemetry { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px; }
+    .tel-card { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; display: flex; flex-direction: column; }
     .tel-val { font-family: var(--font-mono); font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 2px; }
     .tel-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
     .tel-card.highlight .tel-val { color: var(--accent2); text-shadow: 0 0 10px rgba(6,182,212,0.3); }
 
-    .chart-container {
-      background: var(--surface2); border: 1px solid var(--border); border-radius: 12px;
-      padding: 16px; margin-bottom: 16px; position: relative;
-    }
-    .chart-wrapper {
-      position: relative; height: 180px; width: 100%;
-    }
-    .chart-title {
-      font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 12px;
-      text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between;
-    }
+    .chart-container { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+    .chart-wrapper { position: relative; height: 180px; width: 100%; }
+    .chart-title { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between; }
     .chart-subtitle { font-family: var(--font-mono); font-size: 10px; color: var(--muted); font-weight: 400; }
     
-    /* Terminal logs */
     .terminal {
       background: #000; border: 1px solid var(--border); border-radius: 8px;
       padding: 12px; font-family: var(--font-mono); font-size: 11px; color: #4ade80;
@@ -326,32 +314,19 @@
     .terminal .log-warn { color: #fbbf24; }
     .terminal .log-err  { color: #f87171; }
 
-    /* Footer */
-    footer {
-      position: relative; z-index: 1; margin-top: 40px; text-align: center;
-      font-size: 12px; color: var(--muted); line-height: 1.8;
-      width: 100%; border-top: 1px solid var(--border); padding-top: 20px;
-    }
+    footer { position: relative; z-index: 1; margin-top: 40px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; width: 100%; border-top: 1px solid var(--border); padding-top: 20px; }
 
-    @media (max-width: 1024px) {
-      .dashboard { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 600px) {
-      .engines-grid { grid-template-columns: 1fr; }
-      .telemetry { grid-template-columns: 1fr; }
-    }
+    @media (max-width: 1024px) { .dashboard { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .engines-grid { grid-template-columns: 1fr; } .telemetry { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="badge">
-      <span class="badge-dot"></span>
-      SDNET2018 Calibrated Dual Engine
-    </div>
+    <div class="badge"><span class="badge-dot"></span> SDNET2018 Calibrated Dual Engine</div>
     <h1>AI Structural Health Monitoring</h1>
     <p class="subtitle">
-      Professional-grade concrete crack detection. Fusing the precision of a PyTorch CNN with the cognitive analysis of Groq Llama 4 Vision LLM.
+      Professional-grade concrete crack detection. Fusing the precision of a PyTorch CNN with the cognitive analysis of Groq Llama 4 Vision LLM. Supports single and multi-image batch processing.
     </p>
   </header>
 
@@ -366,66 +341,58 @@
       <!-- Upload -->
       <div class="upload-zone" id="uploadZone"
            ondragover="handleDrag(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
-        <input type="file" id="fileInput" accept="image/*" onchange="handleFile(event)" />
+        <input type="file" id="fileInput" accept="image/*" multiple onchange="handleFile(event)" />
         <div class="upload-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
             <polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
           </svg>
         </div>
-        <p class="upload-title">Drop structural image here or browse</p>
+        <p class="upload-title">Drop images here or browse (Select Multiple)</p>
         <p class="upload-hint">Supports high-res JPG, PNG, WebP format</p>
       </div>
 
-      <!-- Preview -->
+      <!-- Preview (Single Image) -->
       <div id="preview-wrap">
         <img id="preview" alt="Selected image" />
         <span class="preview-label">TARGET SENSOR IMAGE</span>
       </div>
 
-      <!-- Button -->
-      <button id="analyzeBtn" onclick="analyzeImage()">
+      <!-- Preview (Multiple Images Text) -->
+      <div id="multi-preview-wrap" style="display:none; margin-top:20px; padding:16px; background:var(--surface2); border:1px solid var(--border); border-radius:12px; text-align:center;">
+        <span style="font-size:18px; font-weight:700;" id="multiCountText">0 Images Selected</span>
+        <div style="font-size:13px; color:var(--muted); margin-top:4px;">Ready for batch processing.</div>
+      </div>
+
+      <button id="analyzeBtn" onclick="startAnalysis()">
         <span class="spinner" id="spinner"></span>
         <span id="btnText">Execute Dual AI Analysis</span>
       </button>
 
-      <!-- Results -->
+      <!-- Results (SINGLE) -->
       <div id="results-section">
-        <!-- Final verdict -->
         <div class="verdict-box" id="verdictBox">
           <span class="verdict-icon" id="verdictIcon">🔍</span>
           <div class="verdict-title" id="verdictTitle">—</div>
           <div class="verdict-sub"  id="verdictSub"></div>
-          <div class="conf-bar-wrap">
-            <div class="conf-bar" id="confBar" style="width:0%"></div>
-          </div>
+          <div class="conf-bar-wrap"><div class="conf-bar" id="confBar" style="width:0%"></div></div>
         </div>
 
-        <!-- Engine cards -->
         <div class="engines-grid">
-          <!-- Groq card -->
           <div class="engine-card groq-card" id="groqCard">
             <div class="engine-header">
               <div class="engine-logo">G</div>
-              <div>
-                <div class="engine-name">Groq Llama 4 Vision</div>
-                <div class="engine-sub">Context Engine · W: 0.70</div>
-              </div>
+              <div><div class="engine-name">Groq Llama 4 Vision</div><div class="engine-sub">Context Engine · W: 0.70</div></div>
             </div>
             <div id="groqSeverity"></div>
             <div class="engine-result" id="groqResult">Awaiting input...</div>
             <div class="engine-conf"   id="groqConf"></div>
             <div class="engine-expl"   id="groqExpl"></div>
           </div>
-
-          <!-- CNN card -->
           <div class="engine-card cnn-card" id="cnnCard">
             <div class="engine-header">
               <div class="engine-logo">N</div>
-              <div>
-                <div class="engine-name">PyTorch CNN</div>
-                <div class="engine-sub">Feature Extractor · W: 0.30</div>
-              </div>
+              <div><div class="engine-name">PyTorch CNN</div><div class="engine-sub">Feature Extractor · W: 0.30</div></div>
             </div>
             <div class="engine-result" id="cnnResult">Awaiting input...</div>
             <div class="engine-conf"   id="cnnConf"></div>
@@ -435,7 +402,6 @@
           </div>
         </div>
 
-        <!-- Insight -->
         <div class="insight-box" id="insightBox" style="display:none">
           <strong>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg> 
@@ -444,10 +410,66 @@
           <span id="insightText"></span>
         </div>
 
-        <!-- Recommendation -->
         <div class="rec-box" id="recBox" style="display:none">
           <strong>Required Engineer Action:</strong> <span id="recText"></span>
         </div>
+      </div>
+
+      <!-- BATCH Results Section -->
+      <div id="batch-section">
+        <div class="batch-progress-container">
+          <div class="batch-header">
+            <div class="batch-title">Batch Processing Report</div>
+            <div class="batch-stats" id="batchProgressText">0 / 0 Complete</div>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-fill" id="batchProgressBar"></div>
+          </div>
+        </div>
+
+        <!-- Executive Summary Panel -->
+        <div id="executiveSummary">
+          <div class="exec-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            Executive Batch Summary
+          </div>
+          <div class="exec-grid">
+            <div class="exec-stat">
+              <div class="exec-val" id="execTotal">0</div>
+              <div class="exec-lbl">Images Scanned</div>
+            </div>
+            <div class="exec-stat">
+              <div class="exec-val" id="execDefects" style="color:#f87171">0</div>
+              <div class="exec-lbl">Defects Found</div>
+            </div>
+            <div class="exec-stat">
+              <div class="exec-val" id="execMaxSev">None</div>
+              <div class="exec-lbl">Peak Severity</div>
+            </div>
+          </div>
+          <div class="exec-rec" id="execRecommendation">
+            Aggregating structural data...
+          </div>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Filename & AI Insight</th>
+                <th>CNN Final</th>
+                <th>Groq Verdict</th>
+                <th>Ensemble</th>
+                <th>Severity</th>
+              </tr>
+            </thead>
+            <tbody id="batchTableBody">
+              <!-- Rows injected via JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <button id="downloadBtn" onclick="downloadCsv()">Download Full CSV Report</button>
       </div>
     </main>
 
@@ -477,7 +499,6 @@
         </div>
       </div>
 
-      <!-- Chart 1: Threshold Sweep -->
       <div class="chart-container">
         <div class="chart-title">
           Decision Boundary Optimization
@@ -488,7 +509,6 @@
         </div>
       </div>
 
-      <!-- Chart 2: Preprocessing -->
       <div class="chart-container">
         <div class="chart-title">
           Preprocessing Ablation Study
@@ -499,7 +519,6 @@
         </div>
       </div>
 
-      <!-- Terminal -->
       <div class="terminal" id="terminalLog">
         <div><span class="log-time">[System]</span> <span class="log-info">Boot sequence initiated.</span></div>
         <div><span class="log-time">[PyTorch]</span> Loaded weights: best_crack_model.pt (4 Blocks)</div>
@@ -516,66 +535,35 @@
   </footer>
 
   <script>
-    // --- Chart Implementations (Using SDNET2018 Hardcoded Test Data) ---
     Chart.defaults.color = '#94a3b8';
     Chart.defaults.font.family = "'JetBrains Mono', monospace";
     
-    // 1. Threshold Sweep Chart (Line)
     const ctxThresh = document.getElementById('thresholdChart').getContext('2d');
     new Chart(ctxThresh, {
       type: 'line',
       data: {
         labels: ['0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9'],
         datasets: [
-          {
-            label: 'Accuracy',
-            data: [74.3, 75.0, 73.3, 74.0, 74.7, 74.7, 74.0, 73.3, 71.7],
-            borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)',
-            tension: 0.3, fill: true, borderWidth: 2, pointRadius: 3
-          },
-          {
-            label: 'Crack Recall',
-            data: [66.7, 65.3, 62.0, 60.7, 60.0, 58.7, 56.7, 54.7, 51.3],
-            borderColor: '#f87171', borderDash: [5, 5], tension: 0.3, borderWidth: 2, pointRadius: 0
-          }
+          { label: 'Accuracy', data: [74.3, 75.0, 73.3, 74.0, 74.7, 74.7, 74.0, 73.3, 71.7], borderColor: '#3b82f6', backgroundColor: 'rgba(59,130,246,0.1)', tension: 0.3, fill: true, borderWidth: 2, pointRadius: 3 },
+          { label: 'Crack Recall', data: [66.7, 65.3, 62.0, 60.7, 60.0, 58.7, 56.7, 54.7, 51.3], borderColor: '#f87171', borderDash: [5, 5], tension: 0.3, borderWidth: 2, pointRadius: 0 }
         ]
       },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { display: true, labels: { boxWidth: 12, font: { size: 10 } } } },
-        scales: {
-          y: { grid: { color: 'rgba(255,255,255,0.05)' }, min: 45, max: 80 },
-          x: { grid: { display: false } }
-        }
-      }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true, labels: { boxWidth: 12, font: { size: 10 } } } }, scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, min: 45, max: 80 }, x: { grid: { display: false } } } }
     });
 
-    // 2. Preprocessing Bar Chart
     const ctxPrep = document.getElementById('prepChart').getContext('2d');
     new Chart(ctxPrep, {
       type: 'bar',
       data: {
         labels: ['/255 Raw', 'Blur+/255', 'ImageNet Norm'],
-        datasets: [{
-          label: 'Accuracy',
-          data: [58.0, 55.7, 74.7],
-          backgroundColor: ['rgba(59,130,246,0.3)', 'rgba(59,130,246,0.3)', 'rgba(16,185,129,0.7)'],
-          borderColor: ['rgba(59,130,246,0.8)', 'rgba(59,130,246,0.8)', 'rgba(16,185,129,1)'],
-          borderWidth: 1, borderRadius: 4
-        }]
+        datasets: [{ data: [58.0, 55.7, 74.7], backgroundColor: ['rgba(59,130,246,0.3)', 'rgba(59,130,246,0.3)', 'rgba(16,185,129,0.7)'], borderColor: ['rgba(59,130,246,0.8)', 'rgba(59,130,246,0.8)', 'rgba(16,185,129,1)'], borderWidth: 1, borderRadius: 4 }]
       },
-      options: {
-        responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
-        scales: {
-          y: { grid: { color: 'rgba(255,255,255,0.05)' }, min: 40, max: 85 },
-          x: { grid: { display: false } }
-        }
-      }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: 'rgba(255,255,255,0.05)' }, min: 40, max: 85 }, x: { grid: { display: false } } } }
     });
 
     // --- App Logic ---
-    let droppedFile = null;
+    let selectedFiles = [];
+    let batchResults = [];
 
     function logTerminal(msg, type='info') {
       const term = document.getElementById('terminalLog');
@@ -587,34 +575,61 @@
 
     function handleDrag(e)      { e.preventDefault(); document.getElementById('uploadZone').classList.add('drag-over'); }
     function handleDragLeave(e) { document.getElementById('uploadZone').classList.remove('drag-over'); }
+    
     function handleDrop(e) {
       e.preventDefault();
       document.getElementById('uploadZone').classList.remove('drag-over');
-      const f = e.dataTransfer.files[0];
-      if (f && f.type.startsWith('image/')) { droppedFile = f; showPreview(f); logTerminal(`File loaded: ${f.name} (${Math.round(f.size/1024)}KB)`); }
+      if (e.dataTransfer.files.length > 0) {
+        processFileSelection(e.dataTransfer.files);
+      }
     }
 
     function handleFile(e) {
-      const f = e.target.files[0];
-      if (f) { droppedFile = null; showPreview(f); logTerminal(`File loaded: ${f.name} (${Math.round(f.size/1024)}KB)`); }
+      if (e.target.files.length > 0) {
+        processFileSelection(e.target.files);
+      }
     }
 
-    function showPreview(file) {
-      const w = document.getElementById('preview-wrap');
-      document.getElementById('preview').src = URL.createObjectURL(file);
-      w.style.display = 'block';
+    function processFileSelection(files) {
+      selectedFiles = Array.from(files).filter(f => f.type.startsWith('image/'));
+      if (selectedFiles.length === 0) return;
+
       document.getElementById('results-section').style.display = 'none';
+      document.getElementById('batch-section').style.display = 'none';
+      document.getElementById('downloadBtn').style.display = 'none';
+      document.getElementById('executiveSummary').style.display = 'none';
+
+      if (selectedFiles.length === 1) {
+        // Single file mode
+        document.getElementById('preview-wrap').style.display = 'block';
+        document.getElementById('multi-preview-wrap').style.display = 'none';
+        document.getElementById('preview').src = URL.createObjectURL(selectedFiles[0]);
+        logTerminal(`Loaded single image: ${selectedFiles[0].name}`, 'info');
+      } else {
+        // Multi file mode
+        document.getElementById('preview-wrap').style.display = 'none';
+        document.getElementById('multi-preview-wrap').style.display = 'block';
+        document.getElementById('multiCountText').textContent = `${selectedFiles.length} Images Selected`;
+        logTerminal(`Loaded batch of ${selectedFiles.length} images.`, 'info');
+      }
       document.getElementById('latVal').textContent = '-- ms';
     }
 
-    async function analyzeImage() {
-      const input = document.getElementById('fileInput');
-      const file  = input.files[0] || droppedFile;
-      if (!file) { alert('Please select an image first.'); return; }
+    function startAnalysis() {
+      if (selectedFiles.length === 0) { alert('Please select an image first.'); return; }
+      
+      if (selectedFiles.length === 1) {
+        analyzeSingle(selectedFiles[0]);
+      } else {
+        analyzeBatch();
+      }
+    }
 
+    // --- SINGLE IMAGE LOGIC ---
+    async function analyzeSingle(file) {
       setLoading(true);
-      showLoadingState();
-      logTerminal('Initiating dual-engine analysis pipeline...', 'info');
+      showSingleLoadingState();
+      logTerminal(`Initiating dual-engine analysis on ${file.name}...`, 'info');
 
       const formData = new FormData();
       formData.append('file', file);
@@ -630,16 +645,16 @@
         const txid = data.tx_id || "Unknown";
         logTerminal(`[${txid}] Inference complete. Latency: ${latency}ms`, 'success');
         
-        renderResults(data);
+        renderSingleResults(data);
       } catch (err) {
         logTerminal(`API Request failed: ${err.message}`, 'error');
-        renderError('Network error: ' + err.message);
+        renderSingleError('Network error: ' + err.message);
       } finally {
         setLoading(false);
       }
     }
 
-    function showLoadingState() {
+    function showSingleLoadingState() {
       document.getElementById('results-section').style.display = 'block';
       const vb = document.getElementById('verdictBox');
       vb.className = 'verdict-box analyzing';
@@ -663,23 +678,21 @@
       document.getElementById('insightBox').style.display = 'none';
     }
 
-    function renderResults(data) {
+    function renderSingleResults(data) {
       const final = data.final || {};
       const groq  = data.groq  || {};
       const cnn   = data.cnn   || {};
 
-      logTerminal(`Combined Verdict: ${final.label} (${final.confidence}%)`, final.label === 'CRACK DETECTED' ? 'warn' : 'info');
+      logTerminal(`Verdict: ${final.label} (${final.confidence}%)`, final.label === 'CRACK DETECTED' ? 'warn' : 'info');
 
-      // ── Final verdict ──
       const isCrack = final.label === 'CRACK DETECTED';
       const vb = document.getElementById('verdictBox');
       vb.className = 'verdict-box ' + (isCrack ? 'crack' : 'no-crack');
       document.getElementById('verdictIcon').textContent  = isCrack ? '⚠️' : '✅';
       document.getElementById('verdictTitle').textContent = final.label || '—';
       document.getElementById('verdictSub').textContent   = 'Weighted Ensemble Confidence: ' + (final.confidence || '—') + '%';
-      setTimeout(function() { document.getElementById('confBar').style.width = (final.confidence || 0) + '%'; }, 80);
+      setTimeout(() => { document.getElementById('confBar').style.width = (final.confidence || 0) + '%'; }, 80);
 
-      // ── Groq card ──
       if (groq.error) {
         document.getElementById('groqResult').textContent  = 'API Error';
         document.getElementById('groqResult').className    = 'engine-result pending';
@@ -690,23 +703,13 @@
         document.getElementById('groqResult').className   = 'engine-result ' + (gCrack ? 'crack' : 'no-crack');
         document.getElementById('groqConf').textContent   = 'Confidence: ' + (groq.confidence || '—') + '%';
         document.getElementById('groqExpl').textContent   = groq.explanation || '';
-
         const sev = (groq.severity || 'None').toLowerCase();
         const sevClass = { none:'sev-none', hairline:'sev-hairline', minor:'sev-minor', moderate:'sev-moderate', severe:'sev-severe' }[sev] || 'sev-none';
         document.getElementById('groqSeverity').innerHTML = '<span class="severity-pill ' + sevClass + '">' + (groq.severity || 'None') + '</span>';
-
-        if (groq.insight) {
-          document.getElementById('insightText').textContent   = groq.insight;
-          document.getElementById('insightBox').style.display  = 'block';
-        }
-
-        if (groq.recommendation) {
-          document.getElementById('recText').textContent   = groq.recommendation;
-          document.getElementById('recBox').style.display  = 'block';
-        }
+        if (groq.insight) { document.getElementById('insightText').textContent = groq.insight; document.getElementById('insightBox').style.display = 'block'; }
+        if (groq.recommendation) { document.getElementById('recText').textContent = groq.recommendation; document.getElementById('recBox').style.display = 'block'; }
       }
 
-      // ── CNN card ──
       if (cnn.error) {
         document.getElementById('cnnResult').textContent  = 'Model Error';
         document.getElementById('cnnResult').className    = 'engine-result pending';
@@ -720,12 +723,192 @@
       }
     }
 
-    function renderError(msg) {
+    function renderSingleError(msg) {
       const vb = document.getElementById('verdictBox');
       vb.className = 'verdict-box analyzing';
       document.getElementById('verdictIcon').textContent  = '❌';
       document.getElementById('verdictTitle').textContent = 'System Error';
       document.getElementById('verdictSub').textContent   = msg;
+    }
+
+    // --- BATCH PROCESSING LOGIC ---
+    async function analyzeBatch() {
+      setLoading(true);
+      document.getElementById('executiveSummary').style.display = 'none';
+      document.getElementById('batch-section').style.display = 'block';
+      document.getElementById('batchTableBody').innerHTML = '';
+      document.getElementById('downloadBtn').style.display = 'none';
+      batchResults = [];
+      
+      const total = selectedFiles.length;
+      logTerminal(`Starting sequential batch processing of ${total} images...`, 'info');
+
+      for (let i = 0; i < total; i++) {
+        const file = selectedFiles[i];
+        document.getElementById('batchProgressText').textContent = `${i} / ${total} Complete`;
+        document.getElementById('batchProgressBar').style.width = `${(i/total)*100}%`;
+        
+        // Add pending row
+        const tr = document.createElement('tr');
+        tr.id = `row-${i}`;
+        tr.innerHTML = `
+          <td><strong>${file.name}</strong></td>
+          <td><span class="status-badge pending">Processing...</span></td>
+          <td><span class="status-badge pending">Processing...</span></td>
+          <td><span class="status-badge pending">Processing...</span></td>
+          <td>-</td>
+        `;
+        document.getElementById('batchTableBody').appendChild(tr);
+
+        // Fetch predict
+        const formData = new FormData();
+        formData.append('file', file);
+        
+        try {
+          const res = await fetch('/predict', { method: 'POST', body: formData });
+          const data = await res.json();
+          
+          // Save to results for CSV
+          batchResults.push({
+            filename: file.name,
+            txid: data.tx_id || 'N/A',
+            cnn_label: data.cnn?.label || 'ERROR',
+            cnn_conf: data.cnn?.confidence || 0,
+            groq_label: data.groq?.label || 'ERROR',
+            groq_conf: data.groq?.confidence || 0,
+            final_label: data.final?.label || 'ERROR',
+            final_conf: data.final?.confidence || 0,
+            severity: data.groq?.severity || 'None',
+            explanation: data.groq?.explanation || '',
+            insight: data.groq?.insight || '',
+            recommendation: data.groq?.recommendation || ''
+          });
+
+          // Update Row with data AND insight
+          updateBatchRow(i, data);
+          logTerminal(`[${data.tx_id}] Batch item ${i+1}/${total}: ${data.final?.label}`, 'success');
+        } catch (e) {
+          logTerminal(`Batch item ${i+1} failed: ${e.message}`, 'error');
+          batchResults.push({ filename: file.name, error: e.message });
+          tr.innerHTML = `<td>${file.name}</td><td colspan="4" style="color:#f87171">Failed: ${e.message}</td>`;
+        }
+      }
+
+      // Finish & Compute Executive Summary
+      document.getElementById('batchProgressText').textContent = `${total} / ${total} Complete`;
+      document.getElementById('batchProgressBar').style.width = `100%`;
+      document.getElementById('downloadBtn').style.display = 'block';
+      
+      computeExecutiveSummary();
+      
+      logTerminal('Batch processing complete. Report ready.', 'info');
+      setLoading(false);
+    }
+
+    function updateBatchRow(idx, data) {
+      const tr = document.getElementById(`row-${idx}`);
+      const cnnBadge = data.cnn?.label === 'CRACK DETECTED' ? 'crack' : 'nocrack';
+      const groqBadge = data.groq?.label === 'CRACK DETECTED' ? 'crack' : 'nocrack';
+      const finalBadge = data.final?.label === 'CRACK DETECTED' ? 'crack' : 'nocrack';
+      
+      const sevClass = { none:'sev-none', hairline:'sev-hairline', minor:'sev-minor', moderate:'sev-moderate', severe:'sev-severe' }[(data.groq?.severity || 'None').toLowerCase()] || 'sev-none';
+      
+      // Inject the filename plus the insight as a sub-row directly in the Filename column
+      const insightHtml = data.groq?.insight 
+        ? `<div class="insight-subrow"><strong>LLM Insight:</strong> ${data.groq.insight}</div>` 
+        : '';
+
+      tr.innerHTML = `
+        <td>
+          <div style="font-weight:700; margin-bottom:4px;">${batchResults[idx].filename}</div>
+          ${insightHtml}
+        </td>
+        <td><span class="status-badge ${cnnBadge}">${data.cnn?.label || 'Err'}</span><br><span style="font-size:10px;color:var(--muted)">${data.cnn?.confidence || 0}%</span></td>
+        <td><span class="status-badge ${groqBadge}">${data.groq?.label || 'Err'}</span><br><span style="font-size:10px;color:var(--muted)">${data.groq?.confidence || 0}%</span></td>
+        <td><span class="status-badge ${finalBadge}">${data.final?.label || 'Err'}</span><br><span style="font-size:10px;color:var(--muted)">${data.final?.confidence || 0}%</span></td>
+        <td><span class="severity-pill ${sevClass}">${data.groq?.severity || 'None'}</span></td>
+      `;
+    }
+
+    function computeExecutiveSummary() {
+      if (batchResults.length === 0) return;
+      
+      let total = batchResults.length;
+      let defects = 0;
+      let severities = { 'none': 0, 'hairline': 1, 'minor': 2, 'moderate': 3, 'severe': 4 };
+      let maxSevVal = 0;
+      let maxSevLabel = 'None';
+      
+      batchResults.forEach(r => {
+        if (r.final_label === 'CRACK DETECTED') defects++;
+        const sevLower = (r.severity || 'None').toLowerCase();
+        const sVal = severities[sevLower] || 0;
+        if (sVal > maxSevVal) {
+          maxSevVal = sVal;
+          maxSevLabel = r.severity;
+        }
+      });
+      
+      document.getElementById('execTotal').textContent = total;
+      document.getElementById('execDefects').textContent = defects;
+      document.getElementById('execDefects').style.color = defects > 0 ? '#f87171' : '#34d399';
+      
+      document.getElementById('execMaxSev').textContent = maxSevLabel;
+      const sevClass = { none:'#34d399', hairline:'#fbbf24', minor:'#fb923c', moderate:'#f87171', severe:'#fca5a5' }[maxSevLabel.toLowerCase()] || '#fff';
+      document.getElementById('execMaxSev').style.color = sevClass;
+      
+      let recHtml = "";
+      if (defects === 0) {
+        recHtml = "<strong>Structural Health Status: HEALTHY.</strong> All analyzed elements show no signs of dangerous cracking. Regular maintenance schedule can be maintained.";
+      } else if (maxSevVal <= 2) {
+        recHtml = "<strong>Structural Health Status: MINOR WEAR.</strong> " + defects + " defects detected, but none exceed minor severity. Recommend logging these locations for the next bi-annual inspection to track propagation.";
+      } else {
+        recHtml = "<strong>Structural Health Status: CRITICAL INVESTIGATION REQUIRED.</strong> " + defects + " defects detected with peak severity reaching " + maxSevLabel + ". Recommend immediate physical inspection by a certified structural engineer at the flagged locations to assess structural integrity.";
+      }
+      
+      document.getElementById('execRecommendation').innerHTML = recHtml;
+      document.getElementById('executiveSummary').style.display = 'block';
+    }
+
+    function downloadCsv() {
+      if (batchResults.length === 0) return;
+      
+      const headers = [
+        'Filename', 'Transaction ID', 
+        'CNN Verdict', 'CNN Conf (%)', 
+        'Groq Verdict', 'Groq Conf (%)', 
+        'Final Verdict', 'Final Conf (%)', 
+        'Severity', 'Explanation', 'LLM Insight', 'Recommendation'
+      ];
+      
+      // Helper to escape CSV quotes and commas
+      const escapeCsv = (str) => {
+        if (!str) return '""';
+        const s = String(str).replace(/"/g, '""');
+        return `"${s}"`;
+      };
+
+      const rows = batchResults.map(r => [
+        escapeCsv(r.filename), escapeCsv(r.txid),
+        escapeCsv(r.cnn_label), r.cnn_conf,
+        escapeCsv(r.groq_label), r.groq_conf,
+        escapeCsv(r.final_label), r.final_conf,
+        escapeCsv(r.severity), escapeCsv(r.explanation), 
+        escapeCsv(r.insight), escapeCsv(r.recommendation)
+      ]);
+      
+      let csvContent = "data:text/csv;charset=utf-8," 
+        + headers.join(",") + "\n"
+        + rows.map(e => e.join(",")).join("\n");
+        
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", `structural_report_${new Date().getTime()}.csv`);
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      logTerminal('Full CSV Report (with Insights) downloaded.', 'info');
     }
 
     function setLoading(on) {

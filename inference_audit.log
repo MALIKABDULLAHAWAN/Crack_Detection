@@ -28,3 +28,327 @@
 2026-04-21 01:15:57 | INFO    | TX-379B76 | Final Verdict: NO CRACK (Conf: 70.2%) | Latency: 2107 ms
 2026-04-21 01:15:57 | INFO    | ------------------------------------------------------------
 2026-04-21 01:15:57 | INFO    | 127.0.0.1 - - [21/Apr/2026 01:15:57] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:03:56 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:03:56] "GET / HTTP/1.1" 200 -
+2026-04-21 02:13:57 | INFO    | TX-69F0C6 | Request accepted: 00001.jpg (5.1 KB)
+2026-04-21 02:13:57 | INFO    | TX-69F0C6 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:13:58 | INFO    | TX-69F0C6 | Groq Verdict: CRACK DETECTED (Conf: 95.0%, Sev: Moderate)
+2026-04-21 02:13:58 | INFO    | TX-69F0C6 | Final Verdict: CRACK DETECTED (Conf: 96.5%) | Latency: 828 ms
+2026-04-21 02:13:58 | INFO    | ------------------------------------------------------------
+2026-04-21 02:13:58 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:13:58] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:14:13 | INFO    | TX-9DB066 | Request accepted: 00002.jpg (5.2 KB)
+2026-04-21 02:14:13 | INFO    | TX-9DB066 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:14:14 | INFO    | TX-9DB066 | Groq Verdict: CRACK DETECTED (Conf: 95.0%, Sev: Moderate)
+2026-04-21 02:14:14 | INFO    | TX-9DB066 | Final Verdict: CRACK DETECTED (Conf: 96.5%) | Latency: 490 ms
+2026-04-21 02:14:14 | INFO    | ------------------------------------------------------------
+2026-04-21 02:14:14 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:14:14] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:14:29 | INFO    | TX-81E791 | Request accepted: 00001.jpg (5.6 KB)
+2026-04-21 02:14:29 | INFO    | TX-81E791 | CNN Verdict: NO CRACK (Conf: 98.8%)
+2026-04-21 02:14:30 | INFO    | TX-81E791 | Groq Verdict: CRACK DETECTED (Conf: 80.0%, Sev: Hairline)
+2026-04-21 02:14:30 | INFO    | TX-81E791 | Final Verdict: CRACK DETECTED (Conf: 56.4%) | Latency: 456 ms
+2026-04-21 02:14:30 | INFO    | ------------------------------------------------------------
+2026-04-21 02:14:30 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:14:30] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:14:48 | INFO    | TX-9A040F | Request accepted: 00001.jpg (5.6 KB)
+2026-04-21 02:14:48 | INFO    | TX-9A040F | CNN Verdict: NO CRACK (Conf: 98.8%)
+2026-04-21 02:14:49 | INFO    | TX-9A040F | Groq Verdict: CRACK DETECTED (Conf: 80.0%, Sev: Hairline)
+2026-04-21 02:14:49 | INFO    | TX-9A040F | Final Verdict: CRACK DETECTED (Conf: 56.4%) | Latency: 893 ms
+2026-04-21 02:14:49 | INFO    | ------------------------------------------------------------
+2026-04-21 02:14:49 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:14:49] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:14:55 | INFO    | TX-CDBD1C | Request accepted: 00002.jpg (4.4 KB)
+2026-04-21 02:14:55 | INFO    | TX-CDBD1C | CNN Verdict: NO CRACK (Conf: 86.5%)
+2026-04-21 02:14:56 | INFO    | TX-CDBD1C | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 02:14:56 | INFO    | TX-CDBD1C | Final Verdict: NO CRACK (Conf: 92.5%) | Latency: 590 ms
+2026-04-21 02:14:56 | INFO    | ------------------------------------------------------------
+2026-04-21 02:14:56 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:14:56] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:15:15 | INFO    | TX-924EC0 | Request accepted: 00021.jpg (2.9 KB)
+2026-04-21 02:15:15 | INFO    | TX-924EC0 | CNN Verdict: CRACK DETECTED (Conf: 25.3%)
+2026-04-21 02:15:16 | INFO    | TX-924EC0 | Groq Verdict: NO CRACK (Conf: 100.0%, Sev: None)
+2026-04-21 02:15:16 | INFO    | TX-924EC0 | Final Verdict: NO CRACK (Conf: 92.4%) | Latency: 566 ms
+2026-04-21 02:15:16 | INFO    | ------------------------------------------------------------
+2026-04-21 02:15:16 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:15:16] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:15:32 | INFO    | TX-3BCCBA | Request accepted: 00034.jpg (3.2 KB)
+2026-04-21 02:15:32 | INFO    | TX-3BCCBA | CNN Verdict: NO CRACK (Conf: 93.6%)
+2026-04-21 02:16:03 | ERROR   | Groq API Exception: <urlopen error _ssl.c:1063: The handshake operation timed out>
+2026-04-21 02:16:03 | ERROR   | TX-3BCCBA | Groq Execution Failed: Groq error: <urlopen error _ssl.c:1063: The handshake operation timed out>
+2026-04-21 02:16:03 | INFO    | TX-3BCCBA | Final Verdict: NO CRACK (Conf: 93.6%) | Latency: 31062 ms
+2026-04-21 02:16:03 | INFO    | ------------------------------------------------------------
+2026-04-21 02:16:03 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:16:03] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:16:08 | INFO    | TX-434AAC | Request accepted: 00034.jpg (3.2 KB)
+2026-04-21 02:16:08 | INFO    | TX-434AAC | CNN Verdict: NO CRACK (Conf: 93.6%)
+2026-04-21 02:16:09 | INFO    | TX-434AAC | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 02:16:09 | INFO    | TX-434AAC | Final Verdict: NO CRACK (Conf: 94.6%) | Latency: 965 ms
+2026-04-21 02:16:09 | INFO    | ------------------------------------------------------------
+2026-04-21 02:16:09 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:16:09] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:16:18 | INFO    | TX-7198C5 | Request accepted: 00040.jpg (5.8 KB)
+2026-04-21 02:16:18 | INFO    | TX-7198C5 | CNN Verdict: NO CRACK (Conf: 98.3%)
+2026-04-21 02:16:18 | INFO    | TX-7198C5 | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 02:16:18 | INFO    | TX-7198C5 | Final Verdict: NO CRACK (Conf: 96.0%) | Latency: 475 ms
+2026-04-21 02:16:18 | INFO    | ------------------------------------------------------------
+2026-04-21 02:16:18 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:16:18] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:16:24 | INFO    | TX-DFD603 | Request accepted: 00040.jpg (5.8 KB)
+2026-04-21 02:16:24 | INFO    | TX-DFD603 | CNN Verdict: NO CRACK (Conf: 98.3%)
+2026-04-21 02:16:25 | INFO    | TX-DFD603 | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 02:16:25 | INFO    | TX-DFD603 | Final Verdict: NO CRACK (Conf: 96.0%) | Latency: 704 ms
+2026-04-21 02:16:25 | INFO    | ------------------------------------------------------------
+2026-04-21 02:16:25 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:16:25] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:16:34 | INFO    | TX-B3F9E9 | Request accepted: 01946.jpg (5.8 KB)
+2026-04-21 02:16:34 | INFO    | TX-B3F9E9 | CNN Verdict: NO CRACK (Conf: 96.8%)
+2026-04-21 02:16:34 | INFO    | TX-B3F9E9 | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 02:16:34 | INFO    | TX-B3F9E9 | Final Verdict: NO CRACK (Conf: 95.5%) | Latency: 517 ms
+2026-04-21 02:16:34 | INFO    | ------------------------------------------------------------
+2026-04-21 02:16:34 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:16:34] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:16:57 | INFO    | TX-A86F38 | Request accepted: 00053.jpg (5.7 KB)
+2026-04-21 02:16:57 | INFO    | TX-A86F38 | CNN Verdict: CRACK DETECTED (Conf: 72.1%)
+2026-04-21 02:16:59 | INFO    | TX-A86F38 | Groq Verdict: NO CRACK (Conf: 90.0%, Sev: None)
+2026-04-21 02:16:59 | INFO    | TX-A86F38 | Final Verdict: NO CRACK (Conf: 71.4%) | Latency: 1806 ms
+2026-04-21 02:16:59 | INFO    | ------------------------------------------------------------
+2026-04-21 02:16:59 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:16:59] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:17:12 | INFO    | TX-A54D37 | Request accepted: 00114.jpg (6.2 KB)
+2026-04-21 02:17:12 | INFO    | TX-A54D37 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:17:13 | INFO    | TX-A54D37 | Groq Verdict: CRACK DETECTED (Conf: 90.0%, Sev: Moderate)
+2026-04-21 02:17:13 | INFO    | TX-A54D37 | Final Verdict: CRACK DETECTED (Conf: 93.0%) | Latency: 613 ms
+2026-04-21 02:17:13 | INFO    | ------------------------------------------------------------
+2026-04-21 02:17:13 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:17:13] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:17:45 | INFO    | TX-FE33A7 | Request accepted: 00141.jpg (6.3 KB)
+2026-04-21 02:17:45 | INFO    | TX-FE33A7 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:17:45 | INFO    | TX-FE33A7 | Groq Verdict: CRACK DETECTED (Conf: 90.0%, Sev: Moderate)
+2026-04-21 02:17:45 | INFO    | TX-FE33A7 | Final Verdict: CRACK DETECTED (Conf: 93.0%) | Latency: 500 ms
+2026-04-21 02:17:45 | INFO    | ------------------------------------------------------------
+2026-04-21 02:17:45 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:17:45] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:18:04 | INFO    | TX-2DB631 | Request accepted: 11520_1.jpg (8.1 KB)
+2026-04-21 02:18:04 | INFO    | TX-2DB631 | CNN Verdict: CRACK DETECTED (Conf: 86.9%)
+2026-04-21 02:18:07 | INFO    | TX-2DB631 | Groq Verdict: CRACK DETECTED (Conf: 80.0%, Sev: Moderate)
+2026-04-21 02:18:07 | INFO    | TX-2DB631 | Final Verdict: CRACK DETECTED (Conf: 82.1%) | Latency: 2978 ms
+2026-04-21 02:18:07 | INFO    | ------------------------------------------------------------
+2026-04-21 02:18:07 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:18:07] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:18:38 | INFO    | TX-7B03FA | Request accepted: 7001-21.jpg (6.0 KB)
+2026-04-21 02:18:38 | INFO    | TX-7B03FA | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:18:38 | INFO    | TX-7B03FA | Groq Verdict: CRACK DETECTED (Conf: 90.0%, Sev: Minor)
+2026-04-21 02:18:38 | INFO    | TX-7B03FA | Final Verdict: CRACK DETECTED (Conf: 93.0%) | Latency: 493 ms
+2026-04-21 02:18:38 | INFO    | ------------------------------------------------------------
+2026-04-21 02:18:38 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:18:38] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:18:49 | INFO    | TX-B79648 | Request accepted: 7001-120.jpg (7.0 KB)
+2026-04-21 02:18:49 | INFO    | TX-B79648 | CNN Verdict: NO CRACK (Conf: 98.7%)
+2026-04-21 02:18:49 | INFO    | TX-B79648 | Groq Verdict: NO CRACK (Conf: 90.0%, Sev: None)
+2026-04-21 02:18:49 | INFO    | TX-B79648 | Final Verdict: NO CRACK (Conf: 92.6%) | Latency: 463 ms
+2026-04-21 02:18:49 | INFO    | ------------------------------------------------------------
+2026-04-21 02:18:49 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:18:49] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:27:13 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:27:13] "GET / HTTP/1.1" 200 -
+2026-04-21 02:27:36 | INFO    | TX-18B0B3 | Request accepted: 7001-117.jpg (9.0 KB)
+2026-04-21 02:27:36 | INFO    | TX-18B0B3 | CNN Verdict: NO CRACK (Conf: 97.7%)
+2026-04-21 02:27:37 | INFO    | TX-18B0B3 | Groq Verdict: NO CRACK (Conf: 95.0%, Sev: None)
+2026-04-21 02:27:37 | INFO    | TX-18B0B3 | Final Verdict: NO CRACK (Conf: 95.8%) | Latency: 455 ms
+2026-04-21 02:27:37 | INFO    | ------------------------------------------------------------
+2026-04-21 02:27:37 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:27:37] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:27:41 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:27:41] "GET / HTTP/1.1" 200 -
+2026-04-21 02:28:45 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:28:45] "GET / HTTP/1.1" 200 -
+2026-04-21 02:28:47 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:28:47] "GET / HTTP/1.1" 200 -
+2026-04-21 02:28:48 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:28:48] "GET / HTTP/1.1" 200 -
+2026-04-21 02:28:49 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:28:49] "GET / HTTP/1.1" 200 -
+2026-04-21 02:31:55 | INFO    | ============================================================
+2026-04-21 02:31:55 | INFO    | SYSTEM BOOT: Initializing Dual-Engine Crack Detection System
+2026-04-21 02:31:55 | INFO    | CNN Model loaded successfully from model\best_crack_model.pt
+2026-04-21 02:31:55 | INFO    | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.42.147:5000
+2026-04-21 02:31:55 | INFO    | [33mPress CTRL+C to quit[0m
+2026-04-21 02:32:20 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:20] "GET / HTTP/1.1" 200 -
+2026-04-21 02:32:30 | INFO    | TX-EE669D | Request accepted: 7001-67.jpg (6.7 KB)
+2026-04-21 02:32:30 | INFO    | TX-EE669D | CNN Verdict: CRACK DETECTED (Conf: 43.2%)
+2026-04-21 02:32:30 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:30 | ERROR   | TX-EE669D | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:30 | INFO    | TX-EE669D | Final Verdict: CRACK DETECTED (Conf: 43.2%) | Latency: 217 ms
+2026-04-21 02:32:30 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:30 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:30] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:32:30 | INFO    | TX-5C88E4 | Request accepted: 7001-69.jpg (7.1 KB)
+2026-04-21 02:32:30 | INFO    | TX-5C88E4 | CNN Verdict: CRACK DETECTED (Conf: 69.2%)
+2026-04-21 02:32:30 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:30 | ERROR   | TX-5C88E4 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:30 | INFO    | TX-5C88E4 | Final Verdict: CRACK DETECTED (Conf: 69.2%) | Latency: 208 ms
+2026-04-21 02:32:30 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:30 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:30] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:32:43 | INFO    | TX-2C2B26 | Request accepted: 7001-47.jpg (7.0 KB)
+2026-04-21 02:32:43 | INFO    | TX-2C2B26 | CNN Verdict: NO CRACK (Conf: 94.0%)
+2026-04-21 02:32:43 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | ERROR   | TX-2C2B26 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | INFO    | TX-2C2B26 | Final Verdict: NO CRACK (Conf: 94.0%) | Latency: 171 ms
+2026-04-21 02:32:43 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:43 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:43] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:32:43 | INFO    | TX-4623B1 | Request accepted: 7001-99.jpg (7.7 KB)
+2026-04-21 02:32:43 | INFO    | TX-4623B1 | CNN Verdict: NO CRACK (Conf: 98.4%)
+2026-04-21 02:32:43 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | ERROR   | TX-4623B1 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | INFO    | TX-4623B1 | Final Verdict: NO CRACK (Conf: 98.4%) | Latency: 151 ms
+2026-04-21 02:32:43 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:43 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:43] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:32:43 | INFO    | TX-0ACD6C | Request accepted: 7001-101.jpg (7.1 KB)
+2026-04-21 02:32:43 | INFO    | TX-0ACD6C | CNN Verdict: NO CRACK (Conf: 97.5%)
+2026-04-21 02:32:43 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | ERROR   | TX-0ACD6C | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | INFO    | TX-0ACD6C | Final Verdict: NO CRACK (Conf: 97.5%) | Latency: 183 ms
+2026-04-21 02:32:43 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:43 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:43] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:32:43 | INFO    | TX-36871B | Request accepted: 7001-132.jpg (8.1 KB)
+2026-04-21 02:32:43 | INFO    | TX-36871B | CNN Verdict: NO CRACK (Conf: 98.5%)
+2026-04-21 02:32:43 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | ERROR   | TX-36871B | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | INFO    | TX-36871B | Final Verdict: NO CRACK (Conf: 98.5%) | Latency: 223 ms
+2026-04-21 02:32:43 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:43 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:43] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:32:43 | INFO    | TX-C1BDD2 | Request accepted: 7001-133.jpg (8.1 KB)
+2026-04-21 02:32:43 | INFO    | TX-C1BDD2 | CNN Verdict: NO CRACK (Conf: 98.6%)
+2026-04-21 02:32:43 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | ERROR   | TX-C1BDD2 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:32:43 | INFO    | TX-C1BDD2 | Final Verdict: NO CRACK (Conf: 98.6%) | Latency: 174 ms
+2026-04-21 02:32:43 | INFO    | ------------------------------------------------------------
+2026-04-21 02:32:43 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:32:43] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:33 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:33] "GET / HTTP/1.1" 200 -
+2026-04-21 02:36:44 | INFO    | TX-A62F1C | Request accepted: 7001-23.jpg (6.0 KB)
+2026-04-21 02:36:44 | INFO    | TX-A62F1C | CNN Verdict: NO CRACK (Conf: 97.5%)
+2026-04-21 02:36:45 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | ERROR   | TX-A62F1C | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | INFO    | TX-A62F1C | Final Verdict: NO CRACK (Conf: 97.5%) | Latency: 1206 ms
+2026-04-21 02:36:45 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:45 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:45] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:45 | INFO    | TX-D6F957 | Request accepted: 7001-24.jpg (5.8 KB)
+2026-04-21 02:36:45 | INFO    | TX-D6F957 | CNN Verdict: NO CRACK (Conf: 96.8%)
+2026-04-21 02:36:45 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | ERROR   | TX-D6F957 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | INFO    | TX-D6F957 | Final Verdict: NO CRACK (Conf: 96.8%) | Latency: 163 ms
+2026-04-21 02:36:45 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:45 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:45] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:45 | INFO    | TX-AD38A6 | Request accepted: 7001-28.jpg (6.5 KB)
+2026-04-21 02:36:45 | INFO    | TX-AD38A6 | CNN Verdict: NO CRACK (Conf: 99.0%)
+2026-04-21 02:36:45 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | ERROR   | TX-AD38A6 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | INFO    | TX-AD38A6 | Final Verdict: NO CRACK (Conf: 99.0%) | Latency: 207 ms
+2026-04-21 02:36:45 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:45 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:45] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:45 | INFO    | TX-38C4A8 | Request accepted: 7001-33.jpg (6.0 KB)
+2026-04-21 02:36:45 | INFO    | TX-38C4A8 | CNN Verdict: NO CRACK (Conf: 98.7%)
+2026-04-21 02:36:45 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | ERROR   | TX-38C4A8 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:45 | INFO    | TX-38C4A8 | Final Verdict: NO CRACK (Conf: 98.7%) | Latency: 174 ms
+2026-04-21 02:36:45 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:45 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:45] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:45 | INFO    | TX-40AF9F | Request accepted: 7001-45.jpg (7.0 KB)
+2026-04-21 02:36:45 | INFO    | TX-40AF9F | CNN Verdict: NO CRACK (Conf: 98.3%)
+2026-04-21 02:36:46 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:46 | ERROR   | TX-40AF9F | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:46 | INFO    | TX-40AF9F | Final Verdict: NO CRACK (Conf: 98.3%) | Latency: 414 ms
+2026-04-21 02:36:46 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:46 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:46] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:46 | INFO    | TX-5EE4CA | Request accepted: 7001-46.jpg (7.3 KB)
+2026-04-21 02:36:46 | INFO    | TX-5EE4CA | CNN Verdict: NO CRACK (Conf: 95.9%)
+2026-04-21 02:36:46 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:46 | ERROR   | TX-5EE4CA | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:46 | INFO    | TX-5EE4CA | Final Verdict: NO CRACK (Conf: 95.9%) | Latency: 150 ms
+2026-04-21 02:36:46 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:46 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:46] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:46 | INFO    | TX-C32E4E | Request accepted: 7001-47.jpg (7.0 KB)
+2026-04-21 02:36:46 | INFO    | TX-C32E4E | CNN Verdict: NO CRACK (Conf: 94.0%)
+2026-04-21 02:36:47 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | ERROR   | TX-C32E4E | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | INFO    | TX-C32E4E | Final Verdict: NO CRACK (Conf: 94.0%) | Latency: 645 ms
+2026-04-21 02:36:47 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:47 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:47] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:47 | INFO    | TX-50D87E | Request accepted: 7001-48.jpg (6.5 KB)
+2026-04-21 02:36:47 | INFO    | TX-50D87E | CNN Verdict: NO CRACK (Conf: 97.9%)
+2026-04-21 02:36:47 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | ERROR   | TX-50D87E | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | INFO    | TX-50D87E | Final Verdict: NO CRACK (Conf: 97.9%) | Latency: 391 ms
+2026-04-21 02:36:47 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:47 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:47] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:47 | INFO    | TX-A0EDEC | Request accepted: 7001-59.jpg (6.8 KB)
+2026-04-21 02:36:47 | INFO    | TX-A0EDEC | CNN Verdict: NO CRACK (Conf: 98.3%)
+2026-04-21 02:36:47 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | ERROR   | TX-A0EDEC | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | INFO    | TX-A0EDEC | Final Verdict: NO CRACK (Conf: 98.3%) | Latency: 231 ms
+2026-04-21 02:36:47 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:47 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:47] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:47 | INFO    | TX-232ADC | Request accepted: 7001-61.jpg (6.8 KB)
+2026-04-21 02:36:47 | INFO    | TX-232ADC | CNN Verdict: NO CRACK (Conf: 98.7%)
+2026-04-21 02:36:47 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | ERROR   | TX-232ADC | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:47 | INFO    | TX-232ADC | Final Verdict: NO CRACK (Conf: 98.7%) | Latency: 166 ms
+2026-04-21 02:36:47 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:47 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:47] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:47 | INFO    | TX-AB3560 | Request accepted: 7001-62.jpg (6.8 KB)
+2026-04-21 02:36:47 | INFO    | TX-AB3560 | CNN Verdict: NO CRACK (Conf: 97.8%)
+2026-04-21 02:36:48 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:48 | ERROR   | TX-AB3560 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:48 | INFO    | TX-AB3560 | Final Verdict: NO CRACK (Conf: 97.8%) | Latency: 157 ms
+2026-04-21 02:36:48 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:48 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:48] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:36:48 | INFO    | TX-D07969 | Request accepted: 7001-63.jpg (7.8 KB)
+2026-04-21 02:36:48 | INFO    | TX-D07969 | CNN Verdict: NO CRACK (Conf: 98.7%)
+2026-04-21 02:36:48 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:48 | ERROR   | TX-D07969 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:36:48 | INFO    | TX-D07969 | Final Verdict: NO CRACK (Conf: 98.7%) | Latency: 150 ms
+2026-04-21 02:36:48 | INFO    | ------------------------------------------------------------
+2026-04-21 02:36:48 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:36:48] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:38:41 | INFO    | TX-8DDBB5 | Request accepted: 7001-21.jpg (6.0 KB)
+2026-04-21 02:38:41 | INFO    | TX-8DDBB5 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:38:41 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:38:41 | ERROR   | TX-8DDBB5 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:38:41 | INFO    | TX-8DDBB5 | Final Verdict: CRACK DETECTED (Conf: 100.0%) | Latency: 234 ms
+2026-04-21 02:38:41 | INFO    | ------------------------------------------------------------
+2026-04-21 02:38:41 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:38:41] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:38:41 | INFO    | TX-4D1FC4 | Request accepted: 7002-27.jpg (7.9 KB)
+2026-04-21 02:38:41 | INFO    | TX-4D1FC4 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:38:41 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:38:41 | ERROR   | TX-4D1FC4 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:38:41 | INFO    | TX-4D1FC4 | Final Verdict: CRACK DETECTED (Conf: 100.0%) | Latency: 199 ms
+2026-04-21 02:38:41 | INFO    | ------------------------------------------------------------
+2026-04-21 02:38:41 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:38:41] "POST /predict HTTP/1.1" 200 -
+2026-04-21 02:38:41 | INFO    | TX-E8A117 | Request accepted: 7002-28.jpg (7.9 KB)
+2026-04-21 02:38:41 | INFO    | TX-E8A117 | CNN Verdict: CRACK DETECTED (Conf: 100.0%)
+2026-04-21 02:38:41 | ERROR   | Groq API HTTP Error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:38:41 | ERROR   | TX-E8A117 | Groq Execution Failed: Groq API error: {"error":{"message":"Invalid API Key","type":"invalid_request_error","code":"invalid_api_key"}}
+
+2026-04-21 02:38:41 | INFO    | TX-E8A117 | Final Verdict: CRACK DETECTED (Conf: 100.0%) | Latency: 201 ms
+2026-04-21 02:38:41 | INFO    | ------------------------------------------------------------
+2026-04-21 02:38:41 | INFO    | 127.0.0.1 - - [21/Apr/2026 02:38:41] "POST /predict HTTP/1.1" 200 -

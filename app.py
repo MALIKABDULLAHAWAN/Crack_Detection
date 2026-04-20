@@ -35,9 +35,8 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger("CrackApp")
-
 app = Flask(__name__)
-
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 # -------------------------------------------------------
 # GROQ CONFIG
 # -------------------------------------------------------
